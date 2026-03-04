@@ -177,4 +177,4 @@ MIT
 
 ---
 
-*Agent personality patterns inspired by [The Agency](https://github.com/msitarzewski/agency-agents) by [@msitarzewski](https://github.com/msitarzewski). OpenClaw operational layer by [@raulv](https://github.com/raulv).*
+*Agent personality patterns inspired by [The Agency](https://github.com/msitarzewski/agency-agents) by [@msitarzewski](https://github.com/msitarzewski). OpenClaw operational layer by [@raulvidis](https://github.com/raulv).*

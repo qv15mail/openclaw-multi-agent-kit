@@ -1,0 +1,50 @@
+// openclaw-config.jsonc — Template configuration snippet
+// Copy relevant sections into your openclaw.json
+// Replace all YOUR_* placeholders with actual values
+
+{
+  // Agent defaults — applied to all agents unless overridden
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "anthropic/claude-sonnet-4-6",
+        "fallbacks": [
+          "anthropic/claude-haiku-4-5"
+        ]
+      },
+      "workspace": "/home/YOUR_USER/.openclaw/workspace",
+      "maxConcurrent": 4
+    }
+  },
+
+  // Telegram channel config
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "pairing",
+      "streaming": "off"
+    }
+  },
+
+  // Messages config
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+
+  // Session config
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+
+  // Hooks for boot files, memory, etc.
+  "hooks": {
+    "internal": {
+      "enabled": true,
+      "entries": {
+        "boot-md": { "enabled": true },
+        "bootstrap-extra-files": { "enabled": true },
+        "session-memory": { "enabled": true }
+      }
+    }
+  }
+}

@@ -209,7 +209,7 @@ In `channels.telegram.accounts`, add each agent's bot config:
 
 **Key:** The orchestrator's topics config should have `enabled: false` for topics owned by other agents. This prevents the orchestrator from responding in agent-owned topics.
 
-**For a primary agent on a topic:**
+**For an agent on a single-agent topic (primary, no teammates):**
 ```json
 "AGENT_ID": {
   "botToken": "AGENT_BOT_TOKEN",
@@ -233,7 +233,7 @@ In `channels.telegram.accounts`, add each agent's bot config:
 }
 ```
 
-**Key:** `requireMention: true` at the group level means the bot only responds when @mentioned in most topics. But `requireMention: false` on their specific topic means they respond to ALL messages in their own topic.
+**Key:** `requireMention: true` at the group level means the bot only responds when @mentioned in most topics. But `requireMention: false` on their specific topic means they respond to ALL messages in their own topic. **This only works when the agent is the ONLY bot in that topic.**
 
 **For a secondary agent on a team topic:**
 ```json
@@ -260,6 +260,19 @@ In `channels.telegram.accounts`, add each agent's bot config:
 ```
 
 **Key:** Secondary agents have `requireMention: true` even on their team topic. They only respond when @mentioned by the human or triggered via `sessions_send` by a teammate.
+
+**Important:** In topics with multiple bots, ALL bots must have `requireMention: true`. If one bot has `requireMention: false`, it will respond to every message — including when you're trying to @mention another agent. This causes multiple bots to respond to the same message.
+
+**For all agents in a multi-agent topic:**
+```json
+"TOPIC_NUMBER": {
+  "requireMention": true,
+  "groupPolicy": "open",
+  "enabled": true
+}
+```
+
+**Every agent** sharing that topic must have this exact config. No exceptions.
 
 ### 5.4 Configure groupAllowFrom
 

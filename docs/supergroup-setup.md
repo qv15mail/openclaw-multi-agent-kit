@@ -51,8 +51,9 @@ Add each bot to your supergroup as admin with these permissions:
 See the example configs in `examples/`.
 
 Key concepts:
-- **Primary agent** on a topic: `requireMention: false` (responds to all messages)
+- **Primary agent** on a topic: `requireMention: false` (responds to all messages) — ONLY if it's the ONLY agent in that topic
 - **Secondary agent** on a topic: `requireMention: true` (only responds when @mentioned)
+- **Multi-agent topics**: ALL agents must have `requireMention: true` — otherwise the bot with `false` will respond to everything, including when you @mention other agents
 - **Disabled topics**: topics where the orchestrator should NOT respond (handled by other bots)
 
 ## Step 6: Test

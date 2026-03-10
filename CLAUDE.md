@@ -31,7 +31,7 @@
 │   ├── agent-design-patterns.md       # How to write effective SOUL.md files
 │   ├── scaling.md                     # Scaling guidance: when to add agents, cost, circular triggers
 │   ├── supergroup-setup.md            # Step-by-step Telegram supergroup setup (covers multi-bot + native topic routing)
-│   └── telegram-dm-topics.md          # Telegram DM forum topics guide
+│   └── telegram-dm-topics.md          # Telegram DM forum topics + ACP binding guide
 ├── examples/
 │   ├── full-team.json                 # Complete 10-agent openclaw.json config
 │   └── minimal-team.json              # Minimal 3-agent config (orchestrator + coder + QA)
@@ -73,7 +73,7 @@
 |-------|-----------|----------|
 | **Multi-bot routing** | Each agent has its own bot identity | Specialist teams with visible personas |
 | **Native topic routing** | One bot, different internal agents per topic | Clean single-bot UX with internal specialization |
-| **DM forum topics** | Topics inside a direct chat | Private 1:1 organized conversations |
+| **DM forum topics** | Topics inside a direct chat | Private 1:1 organized conversations with ACP support |
 
 ### Team Layout (default)
 

@@ -110,25 +110,7 @@ See [`INSTRUCTIONS.md`](INSTRUCTIONS.md) — a complete setup guide written spec
 | [Lead Gen Agent](templates/soul/leadgen-agent.md) | Prospect research and lead scoring |
 | [Ops Agent](templates/soul/ops-agent.md) | Email, calendar, and data management |
 
-### Extended Template Library (cross-checked with Agency Agents)
-
-Added a large cross-checked template library from [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) directly under `templates/soul/`:
-
-- `templates/soul/design`
-- `templates/soul/engineering`
-- `templates/soul/game-development`
-- `templates/soul/integrations`
-- `templates/soul/marketing`
-- `templates/soul/performance-marketing`
-- `templates/soul/product`
-- `templates/soul/project-management`
-- `templates/soul/sales`
-- `templates/soul/spatial-computing`
-- `templates/soul/specialized`
-- `templates/soul/support`
-- `templates/soul/testing`
-
-See [templates/soul/README.md](templates/soul/README.md) for catalog + adaptation checklist + advanced OpenClaw practices.
+See [templates/soul/README.md](templates/soul/README.md) for the full role catalog, adaptation checklist, and advanced OpenClaw practices.
 
 ### Identity Template
 
